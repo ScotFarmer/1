@@ -1,0 +1,17 @@
+function count_frequency($array) {
+    $frequency = [];
+
+    foreach ($array as $element) {
+        if (isset($frequency[$element])) {
+            $frequency[$element]++;
+        } else {
+            $frequency[$element] = 1;
+        }
+    }
+
+    return $frequency;
+}
+
+$array = [1, 2, 1, 3, 2, 4, 1];
+$frequency = count_frequency($array);
+print_r($frequency);
